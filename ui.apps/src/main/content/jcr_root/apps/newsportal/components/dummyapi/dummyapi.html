@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Data Fetch</title>
+</head>
+<body>
+    <h2>Enter ID or Title to Fetch Data</h2>
+    <form id="dataForm">
+        <label for="searchInput">Enter ID or Title:</label>
+        <input type="text" id="searchInput" name="searchInput" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Results:</h3>
+    <div id="result"></div>
+    
+</body>
+</html>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientlib.js @ categories='newsportal.dummyApi'}"/>
+
